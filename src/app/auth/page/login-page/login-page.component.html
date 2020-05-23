@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>
+    <mat-icon>portrait</mat-icon>
+    Login
+  </mat-card-title>
+  <mat-card-content>
+    <button type="button"
+            mat-stroked-button
+            [disabled]="loggingIn"
+            (click)="loginGoogle()">
+      Google
+    </button>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,11 @@
+@import "../../../../theme";
+
+.app-user {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+
+  .mat-icon-button {
+    margin-left: $app-gap-small;
+  }
+}
