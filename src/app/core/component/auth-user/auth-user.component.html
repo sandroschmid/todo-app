@@ -1,0 +1,6 @@
+<div *ngIf="fireAuth.user | async as user" class="app-user">
+  <span>{{ user.displayName }}</span>
+  <button type="button" mat-icon-button matTooltip="Sign out" (click)="signOut()">
+    <mat-icon>lock</mat-icon>
+  </button>
+</div>
