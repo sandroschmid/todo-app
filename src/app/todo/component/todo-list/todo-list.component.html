@@ -1,45 +1,39 @@
-<section>
-  <mat-card>
-    <mat-card-title>
+<mat-accordion multi>
+  <mat-expansion-panel expanded>
+    <mat-expansion-panel-header>
       <mat-icon>assignment</mat-icon>
-      Open TODOs
-    </mat-card-title>
-    <mat-card-content>
-      <ng-template #emptyListRef>
-        <app-info text="You are all set! There are no open items 😀"></app-info>
-      </ng-template>
+      Open Tasks
+    </mat-expansion-panel-header>
+    <ng-template #emptyListRef>
+      <app-info text="You are all set! There are no open items 😀"></app-info>
+    </ng-template>
 
-      <mat-nav-list *ngIf="openTodoItems?.length > 0; else emptyListRef">
-        <mat-list-item *ngFor="let todoItem of openTodoItems" (click)="onToggleDone(todoItem)">
-          <mat-checkbox></mat-checkbox>
-          <div matLine>{{ todoItem.name }}</div>
-          <div matLine>{{ todoItem.description }}</div>
-          <button mat-icon-button type="button" (click)="onDelete(todoItem)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </mat-list-item>
-      </mat-nav-list>
-    </mat-card-content>
-  </mat-card>
-</section>
+    <mat-nav-list *ngIf="openTodoItems?.length > 0; else emptyListRef">
+      <mat-list-item *ngFor="let todoItem of openTodoItems" (click)="onToggleDone(todoItem)">
+        <mat-checkbox></mat-checkbox>
+        <div matLine>{{ todoItem.name }}</div>
+        <div matLine>{{ todoItem.description }}</div>
+        <button mat-icon-button type="button" matTooltip="Delete Task" (click)="onDelete(todoItem)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-expansion-panel>
 
-<section *ngIf="doneTodoItems?.length > 0">
-  <mat-card>
-    <mat-card-title>
+  <mat-expansion-panel *ngIf="doneTodoItems?.length > 0">
+    <mat-expansion-panel-header>
       <mat-icon>assignment_turned_in</mat-icon>
-      Finished TODOs
-    </mat-card-title>
-    <mat-card-content>
-      <mat-nav-list>
-        <mat-list-item *ngFor="let todoItem of doneTodoItems" (click)="onToggleDone(todoItem)">
-          <mat-checkbox [checked]="true"></mat-checkbox>
-          <div matLine class="app-done">{{ todoItem.name }}</div>
-          <div matLine>{{ todoItem.description }}</div>
-          <button mat-icon-button type="button" (click)="onDelete(todoItem)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </mat-list-item>
-      </mat-nav-list>
-    </mat-card-content>
-  </mat-card>
-</section>
+      Finished Tasks
+    </mat-expansion-panel-header>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let todoItem of doneTodoItems" (click)="onToggleDone(todoItem)">
+        <mat-checkbox [checked]="true"></mat-checkbox>
+        <div matLine class="app-done">{{ todoItem.name }}</div>
+        <div matLine>{{ todoItem.description }}</div>
+        <button mat-icon-button type="button" matTooltip="Delete Task" (click)="onDelete(todoItem)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-expansion-panel>
+</mat-accordion>

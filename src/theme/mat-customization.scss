@@ -1,19 +1,28 @@
 @import "./variables";
 @import "./mat-theme";
 
-.mat-card {
-  .mat-card-title {
-    display: flex;
-    align-items: center;
-    color: mat-color($todo-app-primary);
+.mat-card .mat-card-title,
+.mat-expansion-panel .mat-expansion-panel-header .mat-content {
+  display: flex;
+  align-items: center;
+  color: mat-color($todo-app-primary, 500);
 
-    .mat-icon {
-      margin-right: $app-gap-normal;
-    }
+  .mat-icon {
+    margin-right: $app-gap-normal;
   }
+}
 
+.mat-card {
   .mat-card-actions {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+.mat-button,
+.mat-stroked-button,
+.mat-raised-button {
+  .mat-icon {
+    margin-right: $app-gap-small;
   }
 }

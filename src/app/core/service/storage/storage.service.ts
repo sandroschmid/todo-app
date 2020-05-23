@@ -15,8 +15,7 @@ export class StorageService {
   }
 
   public getAll<T extends BaseEntity>(type: string): Observable<T[]> {
-    return this.collection<T>(type)
-      .valueChanges({ idField: 'id' });
+    return this.collection<T>(type).valueChanges({ idField: 'id' });
   }
 
   public findById<T extends BaseEntity>(type: string, id: string): Observable<T | undefined> {
