@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>TODOs</mat-card-title>
+  <mat-card-content>
+    <ng-template #emptyListRef>
+      <app-info></app-info>
+    </ng-template>
+
+    <mat-list *ngIf="todoItems?.length > 0; else emptyListRef">
+      <mat-list-item *ngFor="let todoItem of todoItems">
+        <div matLine>{{ todoItem.name }}</div>
+        <div matLine>{{ todoItem.description }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

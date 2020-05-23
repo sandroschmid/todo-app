@@ -1,0 +1,31 @@
+@import "../../../../theme";
+
+main {
+  padding: $app-gap-large $app-gap-normal;
+}
+
+@media (min-width: 1200px) {
+  main {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: $app-gap-large;
+  }
+}
+
+@media (min-width: 1800px) {
+  main {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 2400px) {
+  main {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 3000px) {
+  main {
+    max-width: 40%;
+  }
+}
