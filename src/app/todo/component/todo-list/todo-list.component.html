@@ -9,6 +9,9 @@
       <mat-list-item *ngFor="let todoItem of todoItems">
         <div matLine>{{ todoItem.name }}</div>
         <div matLine>{{ todoItem.description }}</div>
+        <button mat-icon-button type="button" (click)="onDelete(todoItem)">
+          <mat-icon>delete</mat-icon>
+        </button>
       </mat-list-item>
     </mat-list>
   </mat-card-content>

@@ -45,6 +45,21 @@ export class TodoListPageComponent implements OnInit, OnDestroy {
       );
   }
 
+  public onItemDeleted(todoItem: TodoItem): void {
+    this.todoItemService.delete(todoItem.id)
+      .pipe(
+        take(1),
+        takeUntil(this.ngDestroy),
+      )
+      .subscribe(
+        () => {
+          this.reload();
+          this.utilityService.showMessage('TODO-item deleted');
+        },
+        () => this.utilityService.showMessage('Could not delete TODO-item'),
+      );
+  }
+
   private reload(): void {
     this.nextReload.next();
     this.isLoading = true;

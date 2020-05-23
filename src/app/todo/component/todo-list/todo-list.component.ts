@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TodoItem } from '../../../core/model/todo-item';
 
 @Component({
@@ -9,5 +9,11 @@ import { TodoItem } from '../../../core/model/todo-item';
 export class TodoListComponent {
 
   @Input() public todoItems: TodoItem[];
+
+  @Output() public readonly delete = new EventEmitter<TodoItem>();
+
+  public onDelete(todoItem: TodoItem): void {
+    this.delete.next(todoItem);
+  }
 
 }
