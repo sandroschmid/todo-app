@@ -1,8 +1,17 @@
-html, body {
+@import "./variables";
+
+html,
+body {
   height: 100%;
 }
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+section {
+  &:not(:last-child) {
+    margin-bottom: $app-gap-large;
+  }
 }

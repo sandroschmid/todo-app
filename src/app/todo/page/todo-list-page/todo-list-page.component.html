@@ -1,5 +1,11 @@
-<ng-template #loadingRef>
-  <app-loading></app-loading>
-</ng-template>
+<section>
+  <app-todo-form (itemCreated)="onItemCreated($event)"></app-todo-form>
+</section>
 
-<app-todo-list *ngIf="!isLoading; else loadingRef" [todoItems]="todoItems"></app-todo-list>
+<section>
+  <ng-template #loadingRef>
+    <app-loading></app-loading>
+  </ng-template>
+
+  <app-todo-list *ngIf="!isLoading; else loadingRef" [todoItems]="todoItems"></app-todo-list>
+</section>
