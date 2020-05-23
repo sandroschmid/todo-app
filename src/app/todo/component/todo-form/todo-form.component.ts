@@ -21,6 +21,10 @@ export class TodoFormComponent {
   }
 
   public createItem(): void {
+    if (this.form.invalid) {
+      return;
+    }
+
     const { name, description } = this.form.value;
     const todoItem: TodoItem = {
       id: `todo-${new Date().getTime()}`,
@@ -30,6 +34,14 @@ export class TodoFormComponent {
     };
 
     this.itemCreated.next(todoItem);
+    this.reset();
+  }
+
+  private reset(): void {
+    this.form.reset({}, { emitEvent: false });
+    for (const control of Object.values(this.form.controls)) {
+      control.setErrors(null, { emitEvent: false });
+    }
   }
 
 }

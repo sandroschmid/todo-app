@@ -5,6 +5,13 @@
         <mat-form-field>
           <mat-label>Name</mat-label>
           <input matInput formControlName="name" required>
+          <button *ngIf="form.controls.name.value"
+                  type="button"
+                  mat-icon-button
+                  matSuffix
+                  (click)="form.controls.name.setValue('')">
+            <mat-icon>clear</mat-icon>
+          </button>
           <mat-error>Name is required</mat-error>
         </mat-form-field>
       </div>
@@ -12,6 +19,13 @@
         <mat-form-field>
           <mat-label>Description</mat-label>
           <input matInput formControlName="description">
+          <button *ngIf="form.controls.description.value"
+                  type="button"
+                  mat-icon-button
+                  matSuffix
+                  (click)="form.controls.description.setValue('')">
+            <mat-icon>clear</mat-icon>
+          </button>
         </mat-form-field>
       </div>
     </mat-card-content>
