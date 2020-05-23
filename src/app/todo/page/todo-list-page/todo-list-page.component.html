@@ -9,5 +9,6 @@
 
   <app-todo-list *ngIf="!isLoading; else loadingRef"
                  [todoItems]="todoItems"
+                 (toggleDone)="onToggleDone($event)"
                  (delete)="onItemDeleted($event)"></app-todo-list>
 </section>

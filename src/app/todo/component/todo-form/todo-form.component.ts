@@ -26,6 +26,7 @@ export class TodoFormComponent {
       id: `todo-${new Date().getTime()}`,
       name,
       description,
+      isDone: false,
     };
 
     this.itemCreated.next(todoItem);
