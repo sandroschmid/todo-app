@@ -1,4 +1,15 @@
+@import "./variables";
+
 .mat-card {
+  .mat-card-title {
+    display: flex;
+    align-items: center;
+
+    .mat-icon {
+      margin-right: $app-gap-normal;
+    }
+  }
+
   .mat-card-actions {
     display: flex;
     justify-content: flex-end;

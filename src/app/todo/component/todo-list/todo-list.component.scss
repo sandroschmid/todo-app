@@ -1,3 +1,10 @@
+@import "../../../../theme";
+
 .app-done {
   text-decoration: line-through;
+}
+
+.mat-checkbox {
+  order: -1;
+  margin-right: $app-gap-normal;
 }

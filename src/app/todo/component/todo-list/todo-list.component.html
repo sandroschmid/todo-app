@@ -1,6 +1,9 @@
 <section>
   <mat-card>
-    <mat-card-title>Open TODOs</mat-card-title>
+    <mat-card-title>
+      <mat-icon>assignment</mat-icon>
+      Open TODOs
+    </mat-card-title>
     <mat-card-content>
       <ng-template #emptyListRef>
         <app-info text="You are all set! There are no open items 😀"></app-info>
@@ -22,7 +25,10 @@
 
 <section *ngIf="doneTodoItems?.length > 0">
   <mat-card>
-    <mat-card-subtitle>Finished TODOs</mat-card-subtitle>
+    <mat-card-title>
+      <mat-icon>assignment_turned_in</mat-icon>
+      Finished TODOs
+    </mat-card-title>
     <mat-card-content>
       <mat-nav-list>
         <mat-list-item *ngFor="let todoItem of doneTodoItems" (click)="onToggleDone(todoItem)">

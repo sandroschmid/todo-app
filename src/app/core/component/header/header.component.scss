@@ -2,7 +2,13 @@
 
 .mat-toolbar {
   a {
+    display: inline-flex;
+    align-items: center;
     color: $app-color-white;
     text-decoration: none;
+
+    .mat-icon {
+      margin-right: $app-gap-normal;
+    }
   }
 }
