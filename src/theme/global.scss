@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mat-theme";
 
 html,
 body {
@@ -8,6 +9,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: mat-color($todo-app-primary);
 }
 
 section {

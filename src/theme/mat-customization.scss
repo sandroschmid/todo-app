@@ -1,9 +1,11 @@
 @import "./variables";
+@import "./mat-theme";
 
 .mat-card {
   .mat-card-title {
     display: flex;
     align-items: center;
+    color: mat-color($todo-app-primary);
 
     .mat-icon {
       margin-right: $app-gap-normal;
