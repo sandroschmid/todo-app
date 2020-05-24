@@ -6,9 +6,15 @@ main {
 
 @media (min-width: 1200px) {
   main {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
     padding: $app-gap-large;
+  }
+}
+
+@media (min-width: 1400px) {
+  main {
+    max-width: 70%;
   }
 }
 
