@@ -8,9 +8,18 @@
       <app-loading></app-loading>
     </ng-template>
 
-    <app-todo-list *ngIf="!isLoading; else loadingRef"
-                   [todoItems]="todoItems"
-                   (toggleDone)="onToggleDone($event)"
-                   (delete)="onDeleteItem($event)"></app-todo-list>
+    <ng-container *ngIf="!isLoading; else loadingRef">
+      <section>
+        <app-todo-filter [(filter)]="todoItemFilter"
+                         (filterChange)="onFilterChange($event)"></app-todo-filter>
+      </section>
+
+      <section>
+        <app-todo-list [todoItems]="todoItems"
+                       [filter]="todoItemFilter"
+                       (toggleDone)="onToggleDone($event)"
+                       (delete)="onDeleteItem($event)"></app-todo-list>
+      </section>
+    </ng-container>
   </section>
 </div>

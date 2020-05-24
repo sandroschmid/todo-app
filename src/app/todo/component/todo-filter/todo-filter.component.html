@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>
+    <mat-icon>search</mat-icon>
+    Find TODOs
+  </mat-card-title>
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput type="text" [formControl]="filterControl">
+    <mat-hint>Filter your TODOs by their title.</mat-hint>
+    <button *ngIf="filterControl.value" mat-icon-button matSuffix (click)="filterControl.setValue('')">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </mat-form-field>
+</mat-card>

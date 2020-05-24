@@ -8,6 +8,8 @@ import { TodoItem } from '../../../core/model/todo-item';
 })
 export class TodoListComponent {
 
+  @Input() public readonly filter: string;
+
   @Output() public readonly toggleDone = new EventEmitter<TodoItem>();
   @Output() public readonly delete = new EventEmitter<TodoItem>();
 
