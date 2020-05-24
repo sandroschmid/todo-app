@@ -1,6 +1,4 @@
-# TODO-App
-
-![ngGirls Badge](https://raw.githubusercontent.com/ng-girls/todo-list-tutorial/master/.gitbook/assets/nggirls-badge.png)
+# TODO-App ![ngGirls Badge](https://raw.githubusercontent.com/ng-girls/todo-list-tutorial/master/.gitbook/assets/nggirls-badge.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
