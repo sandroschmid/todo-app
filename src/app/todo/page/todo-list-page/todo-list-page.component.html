@@ -1,14 +1,16 @@
-<section>
-  <app-todo-form (itemCreated)="onItemCreated($event)"></app-todo-form>
-</section>
+<div class="app-columns">
+  <section class="app-column">
+    <app-todo-form (itemCreated)="onItemCreated($event)"></app-todo-form>
+  </section>
 
-<section>
-  <ng-template #loadingRef>
-    <app-loading></app-loading>
-  </ng-template>
+  <section class="app-column">
+    <ng-template #loadingRef>
+      <app-loading></app-loading>
+    </ng-template>
 
-  <app-todo-list *ngIf="!isLoading; else loadingRef"
-                 [todoItems]="todoItems"
-                 (toggleDone)="onToggleDone($event)"
-                 (delete)="onDeleteItem($event)"></app-todo-list>
-</section>
+    <app-todo-list *ngIf="!isLoading; else loadingRef"
+                   [todoItems]="todoItems"
+                   (toggleDone)="onToggleDone($event)"
+                   (delete)="onDeleteItem($event)"></app-todo-list>
+  </section>
+</div>

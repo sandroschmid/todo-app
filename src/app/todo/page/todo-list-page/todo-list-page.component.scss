@@ -1,0 +1,13 @@
+@import "../../../../theme";
+
+.app-columns {
+  display: flex;
+
+  .app-column {
+    flex: 1 0 auto;
+
+    &:not(:last-child) {
+      margin-right: $app-gap-large;
+    }
+  }
+}
