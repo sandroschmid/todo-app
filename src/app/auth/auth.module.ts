@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 
 import { AuthRoutingModule } from './auth-routing.module';
-import { LoginPageComponent } from './page/login-page/login-page.component';
+import { SignInPageComponent } from './page/sign-in-page/sign-in-page.component';
 
 @NgModule({
   imports: [
@@ -10,7 +10,7 @@ import { LoginPageComponent } from './page/login-page/login-page.component';
     SharedModule,
   ],
   declarations: [
-    LoginPageComponent,
+    SignInPageComponent,
   ],
 })
 export class AuthModule {

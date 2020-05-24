@@ -27,7 +27,8 @@ export class TodoFormComponent {
 
     const { name, description } = this.form.value;
     const todoItem: TodoItem = {
-      id: `todo-${new Date().getTime()}`,
+      id: undefined,
+      userEmail: undefined,
       name,
       description,
       isDone: false,

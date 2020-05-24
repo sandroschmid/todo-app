@@ -1,6 +1,20 @@
-<div *ngIf="fireAuth.user | async as user" class="app-user">
-  <span>{{ user.displayName }}</span>
-  <button type="button" mat-icon-button matTooltip="Sign out" (click)="signOut()">
-    <mat-icon>lock</mat-icon>
-  </button>
-</div>
+<ng-container *ngIf="user$ | async as user">
+  <mat-menu #appUserMenuRef="matMenu" xPosition="before">
+    <button type="button" mat-menu-item disabled>
+      {{ user.displayName }}
+      <small>@{{ user.provider }}</small>
+    </button>
+    <button type="button" mat-menu-item (click)="signOut()">
+      <mat-icon>lock</mat-icon>
+      Sign out
+    </button>
+  </mat-menu>
+
+  <div [matMenuTriggerFor]="appUserMenuRef" class="app-menu-trigger">
+    <ng-template #noUserIconRef>
+      <mat-icon>person</mat-icon>
+    </ng-template>
+
+    <img *ngIf="user.photoUrl; else noUserIconRef" [src]="user.photoUrl" alt="Profile Picture">
+  </div>
+</ng-container>

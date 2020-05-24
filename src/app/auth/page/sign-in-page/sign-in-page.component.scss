@@ -1,0 +1,36 @@
+@import "src/theme";
+
+@mixin auth-button($color-primary, $font-color) {
+  background-color: $color-primary;
+  color: $font-color;
+
+  &:hover {
+    @if hue($color-primary) < 180 {
+      background-color: darken($color-primary, 10%);
+    } @else {
+      background-color: lighten($color-primary, 10%);
+    }
+  }
+}
+
+.mat-card {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+
+  .mat-stroked-button {
+    $app-hover-factor: 10%;
+
+    width: 100%;
+    margin-top: $app-gap-normal;
+
+    &.app-google {
+      @include auth-button($app-color-google, $app-color-black);
+    }
+
+    &.app-github {
+      @include auth-button($app-color-github, $app-color-white);
+    }
+  }
+
+}

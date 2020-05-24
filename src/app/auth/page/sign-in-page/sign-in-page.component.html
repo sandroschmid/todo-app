@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>
+    <mat-icon>portrait</mat-icon>
+    Sign in
+  </mat-card-title>
+  <mat-card-content>
+    <button type="button" class="app-google"
+            mat-stroked-button
+            [disabled]="isLoading"
+            (click)="signInWithGoogle()">
+      <mat-icon svgIcon="google"></mat-icon>
+      Google
+    </button>
+    <button type="button" class="app-github"
+            mat-stroked-button
+            [disabled]="isLoading"
+            (click)="signInWithGithub()">
+      <mat-icon svgIcon="github"></mat-icon>
+      Github
+    </button>
+  </mat-card-content>
+</mat-card>

@@ -1,11 +1,12 @@
 @import "../../../../theme";
 
-.app-user {
+.app-menu-trigger {
   display: flex;
   align-items: center;
-  font-size: 0.9rem;
+  cursor: pointer;
 
-  .mat-icon-button {
-    margin-left: $app-gap-small;
+  img {
+    width: 45px;
+    border-radius: 50%;
   }
 }
