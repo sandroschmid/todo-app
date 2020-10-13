@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { CollectionReference, QueryFn } from '@angular/fire/firestore/interfaces';
 import { Observable } from 'rxjs';
 import { filter, map, switchMap } from 'rxjs/operators';
-import { AuthUser } from '../../model/auth-user';
-import { TodoItem } from '../../model/todo-item';
-import { StorageService } from '../storage/storage.service';
-import { UtilityService } from '../utility/utility.service';
+import { AuthUser } from '../model/auth-user';
+import { TodoItem } from '../model/todo-item';
+import { StorageService } from './storage.service';
+import { UtilityService } from './utility.service';
 
 @Injectable({
   providedIn: 'root',

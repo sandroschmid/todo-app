@@ -4,7 +4,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { QueryFn } from '@angular/fire/firestore/interfaces';
 import { Observable } from 'rxjs';
 import { fromPromise } from 'rxjs/internal-compatibility';
-import { BaseEntity } from '../../model/base-entity';
+import { BaseEntity } from '../model/base-entity';
 
 @Injectable({
   providedIn: 'root',

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { auth } from 'firebase/app';
-import { UtilityService } from '../../../core/service/utility/utility.service';
+import { UtilityService } from '../../../core/service/utility.service';
 
 @Component({
   selector: 'app-sign-in-page',
@@ -37,6 +37,7 @@ export class SignInPageComponent {
       await this.fireAuth.signInWithRedirect(provider);
     } catch (error) {
       this.utility.showMessage('Could not sign in');
+      console.error('Could not sign in', error);
     }
   }
 

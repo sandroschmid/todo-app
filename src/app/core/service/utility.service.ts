@@ -3,8 +3,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { AuthProvider } from '../../model/auth-provider';
-import { AuthUser } from '../../model/auth-user';
+import { AuthProvider } from '../model/auth-provider';
+import { AuthUser } from '../model/auth-user';
 
 @Injectable({
   providedIn: 'root',

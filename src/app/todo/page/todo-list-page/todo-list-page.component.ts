@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { map, take, takeUntil } from 'rxjs/operators';
 import { TodoItem } from '../../../core/model/todo-item';
-import { TodoItemsService } from '../../../core/service/todo-items/todo-items.service';
-import { UtilityService } from '../../../core/service/utility/utility.service';
+import { TodoItemsService } from '../../../core/service/todo-items.service';
+import { UtilityService } from '../../../core/service/utility.service';
 
 @Component({
   selector: 'app-todo-list-page',

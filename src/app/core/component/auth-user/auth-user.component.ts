@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthUser } from '../../model/auth-user';
-import { UtilityService } from '../../service/utility/utility.service';
+import { UtilityService } from '../../service/utility.service';
 
 @Component({
   selector: 'app-auth-user',
